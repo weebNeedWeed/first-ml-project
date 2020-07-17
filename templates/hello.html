@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    {% if messages %}
+    <h1 style="color:red">{{messages}}</h1>
+    {% endif %}
+    <form action="/data" method="post">
+        <p>age</p>
+        <input type="number" name="age" value="1" />
+        <p>sex</p>
+        <select name="sex" value="male">
+          <option value="male">male</option>
+          <option value="female">female</option>
+			  </select>
+        <p>embarked</p>
+        <select name="embarked" value="S">
+          <option value="S">S</option>
+          <option value="C">C</option>
+          <option value="Q">Q</option>
+			  </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
